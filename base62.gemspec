@@ -7,8 +7,9 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
   gem.authors       = ['Larry Fox']
   gem.email         = ['l@rryfox.us']
-  gem.description   = 'Convert to and from base 10 and base 62.'
-  gem.summary       = 'Convert to and from base 10 and base 62.'
+  gem.homepage      = 'https://github.com/larryfox/base62-ruby'
+  gem.description   = 'Encode and decode base 62.'
+  gem.summary       = 'Convert between base 10 and base 62.'
 
   gem.required_ruby_version = '>= 2.0'
 
