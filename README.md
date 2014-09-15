@@ -1,5 +1,5 @@
 # Rebase
-Encode and decode from base 10 to string in the given base. Accepts bases 2—62, or an array of an arbitrary alphabet.
+Convert integers to a given base and back again. Accepts bases 2—62, or an array of an arbitrary alphabet.
 
 ~~~ruby
 require 'rebase'

@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Larry Fox']
   gem.email         = ['l@rryfox.us']
   gem.homepage      = 'https://github.com/larryfox/rebase-ruby'
-  gem.description   = 'Encode and decode from base 10 to string in the given base. Accepts bases 2—62, or an array of an arbitrary alphabet.'
-  gem.summary       = 'Convert integers to a given base.'
+  gem.description   = 'Convert integers to a given base and back again'
+  gem.summary       = 'Convert integers to a given base and back again'
 
   gem.required_ruby_version = '>= 2.0'
 
