@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = 'rebase'
-  gem.version       = '0.0.1'
+  gem.version       = '1.0.0'
   gem.license       = 'MIT'
   gem.authors       = ['Larry Fox']
   gem.email         = ['l@rryfox.us']
