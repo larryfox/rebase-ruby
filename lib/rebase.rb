@@ -56,7 +56,7 @@ class Rebase
 
   def get_base(int)
     raise ArgumentError, "Invalid base: #{int}" if int < 2 || int > 62
-    self.class.const_get("B#{int}")
+    (int > 36 ? B62 : B36)[0...int]
   end
 
   B62 = %w[
@@ -65,7 +65,10 @@ class Rebase
     a b c d e f g h i j k l m n o p q r s t u v w x y z
   ]
 
-  (2...62).map { |i| const_set("B#{i}", B62[0...i]) }
+  B36 = %w[
+    0 1 2 3 4 5 6 7 8 9
+    a b c d e f g h i j k l m n o p q r s t u v w x y z
+  ]
 end
 
 def Rebase(alphabet, int=nil)
