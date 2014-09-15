@@ -1,24 +1,28 @@
-# Base62
-Encode and decode base 62.
+# Rebase
+Encode and decode from base 10 to string in the given base. Accepts bases 2—62, or an array of an arbitrary alphabet.
 
 ~~~ruby
-require 'base62'
+require 'rebase'
 
-Base62.encode62(10622433094) # => "Base62"
-Base62.decode62('Base62') # => 10622433094
+Base62 = Rebase(62)
+Base62.encode(10622433094) # => "Base62"
+Base62.decode('Base62') # => 10622433094
 
-# Extensions to String and Fixnum
-require 'base62/ext'
+# Extensions to String and Integer
+require 'rebase/ext'
 
-'Base62'.to_i_62 # => 10622433094
-10622433094.to_s_62 # => "Base62"
+'Base62'.decode_base(62) # => 10622433094
+10622433094.encode_base(62) # => "Base62"
 ~~~
 
-## `encode62(int)` → str
-Returns string representation of `int` in base 62. `int` must be non negative, otherwise it raises an `ArgumentError`.
+## `Rebase(base[, int])`
+Base can be an integer between 2 and 62, an array forming a custom alphabet (items are expected to respond to `#to_s`), or the symbol `:hex` or `:binary` for base 16 and base 2 respectively. Passing the optional int is the equivalent of calling `Rebase(base).encode(int)`.
 
-## `decode62(str)` → int
-Returns integer representation of `str`. `str` must not be blank or contain invalid characters, otherwise it raises an `ArgumentError`.
+## `encode(int)`
+Returns string representation of `int` in a given base. `int` must be non negative, otherwise it raises an `ArgumentError`.
+
+## `decode(str)`
+Returns integer representation of `str` in base 10. `str` must not be blank or contain invalid characters, otherwise it raises an `ArgumentError`.
 
 ### License
 The MIT License. Copyright © 2014 Larry Fox
