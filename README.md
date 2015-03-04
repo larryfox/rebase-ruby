@@ -1,6 +1,9 @@
 # Rebase
 Convert integers to a given base and back again. Accepts bases 2—62, or an array of an arbitrary alphabet.
 
+[![Build Status](https://travis-ci.org/larryfox/rebase-ruby.svg?branch=master)](https://travis-ci.org/larryfox/rebase-ruby)
+[![Code Climate](https://codeclimate.com/github/larryfox/rebase-ruby/badges/gpa.svg)](https://codeclimate.com/github/larryfox/rebase-ruby)
+
 ~~~ruby
 require 'rebase'
 
