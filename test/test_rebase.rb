@@ -1,8 +1,8 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'rebase'
 require 'rebase/ext'
 
-class RebaseTest < Test::Unit::TestCase
+class RebaseTest < MiniTest::Test
   def test_encode
     LG_TEST_CASES.each do |base, (str, int)|
       assert_equal str, Rebase(base).encode(int)
@@ -56,7 +56,7 @@ class RebaseTest < Test::Unit::TestCase
   end
 end
 
-class StringTest < Test::Unit::TestCase
+class StringTest < MiniTest::Test
   def test_decode_base
     LG_TEST_CASES.each do |base, (str, int)|
       assert_equal int, str.decode_base(base)
@@ -68,7 +68,7 @@ class StringTest < Test::Unit::TestCase
   end
 end
 
-class IntegerTest < Test::Unit::TestCase
+class IntegerTest < MiniTest::Test
   def test_encode_base
     LG_TEST_CASES.each do |base, (str, int)|
       assert_equal str, int.encode_base(base)

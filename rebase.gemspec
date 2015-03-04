@@ -13,6 +13,9 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = '>= 2.0'
 
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'minitest', '~> 5.5.1'
+
   gem.files         += Dir.glob('lib/**/*.rb')
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
